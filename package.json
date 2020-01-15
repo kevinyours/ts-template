@@ -41,6 +41,9 @@
     "prettier": "^1.19.1",
     "ts-node": "^8.6.2"
   },
+  "engines": {
+    "node": ">=10.18.0"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "tsc --noEmit && lint-staged"
