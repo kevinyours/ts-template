@@ -1,0 +1,46 @@
+{
+  "name": "template",
+  "version": "0.0.1",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "license": "MIT",
+  "description": "TS Common Template",
+  "keywords": [
+    "Kevin You",
+    "TypeScript",
+    "Common",
+    "Template"
+  ],
+  "files": [
+    "build/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevin-grylls/ts-template.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "date-fns": "^2.9.0",
+    "reflect-metadata": "^0.1.13",
+    "typescript": "^3.7.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^13.1.7",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "mocha": "^7.0.0",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.6.2"
+  }
+}
