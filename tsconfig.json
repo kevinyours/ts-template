@@ -12,6 +12,7 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "declaration": true,
     "rootDirs": ["src"],
