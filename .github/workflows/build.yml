@@ -1,42 +1,42 @@
-# name: CI
-# on:
-#   push:
-#     branches:
-#       - master
+name: CI
+on:
+  push:
+    branches:
+      - master
 
-# # Master Branch 에 Push 이벤트가 발생하였을 때 실행
+# Master Branch 에 Push 이벤트가 발생하였을 때 실행
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-18.04
-#     steps:
-#       # Git Repository 체크아웃
-#       - name: Checkout source code.
-#         uses: actions/checkout@master
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      # Git Repository 체크아웃
+      - name: Checkout source code.
+        uses: actions/checkout@master
 
-#       # node modules 캐싱
-#       - name: Cache node modules
-#         uses: actions/cache@v1
-#         with:
-#           path: node_modules
-#           key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
-#           restore-keys: |
-#             ${{ runner.OS }}-build-
-#             ${{ runner.OS }}-
-#       # Dependency 설치
-#       - name: Install Dependencies
-#         run: yarn install
+      # node modules 캐싱
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
+      # Dependency 설치
+      - name: Install Dependencies
+        run: yarn install
 
-#       # 패키지 빌드
-#       - name: Build
-#         run: yarn build
+      # 패키지 빌드
+      - name: Build
+        run: yarn build
 
-#       # Private NPM Token 설정
-#       - name: Set up NPM authentication
-#         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.YARN_TOKEN }}" >> ~/.npmrc
+      # Private NPM Token 설정
+      - name: Set up NPM authentication
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.YARN_TOKEN }}" >> ~/.npmrc
 
-#       # npm 배포
-#       - name: Publish
-#         run: yarn publish
-#         env:
-#           NODE_AUTH_TOKEN: ${{ secrets.YARN_TOKEN }}
+      # npm 배포
+      - name: Publish
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.YARN_TOKEN }}
