@@ -39,7 +39,8 @@
     "mocha": "^7.0.0",
     "nyc": "^15.0.0",
     "prettier": "^1.19.1",
-    "ts-node": "^8.6.2"
+    "ts-node": "^8.6.2",
+    "typedoc": "^0.16.7"
   },
   "engines": {
     "node": ">=10.18.0"
@@ -62,6 +63,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "typedoc": "typedoc --out docs src",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet",
     "test": "mocha -r ts-node/register tests/**/*.test.ts",
     "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test"

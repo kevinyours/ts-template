@@ -1,8 +1,19 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "ES5",
-    "removeComments": true,
+    "target": "es5",
+    "lib": [
+      "es5",
+      "scripthost",
+      "es2015.collection",
+      "es2015.promise",
+      "es2015.iterable",
+      "es2016",
+      "esnext.asynciterable"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "sourceMap": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -11,9 +22,7 @@
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "allowSyntheticDefaultImports": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "removeComments": true,
     "declaration": true,
     "rootDirs": ["src"],
     "baseUrl": "src",
