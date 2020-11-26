@@ -1,3 +1,3 @@
 # ts-template
 
-- My Common Template for TypeScript Project
+- My Template for TS Project
