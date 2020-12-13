@@ -3,13 +3,12 @@
     "module": "commonjs",
     "target": "es5",
     "lib": [
-      "es5",
-      "scripthost",
-      "es2015.collection",
-      "es2015.promise",
-      "es2015.iterable",
-      "es2016",
-      "esnext.asynciterable"
+      "ES2015",
+      "ES2016",
+      "ES2017",
+      "ES2018",
+      "ES2019",
+      "esnext"
     ],
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
